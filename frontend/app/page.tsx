@@ -1,7 +1,7 @@
 'use client';
 
 import ImageCarousel from "./components/ImageCarousel";
-import Contact from "./components/Contact";
+import ContactSection from "./components/ContactSection";
 import About from "./components/About";
 import Link from "next/link";
 
@@ -17,7 +17,6 @@ export default function Home() {
       <section id="about">
         <About />
       </section>
-      
 
       {/* Booking CTA */}
       <section id="booking-preview" className="py-12 px-6">
@@ -35,9 +34,9 @@ export default function Home() {
       </section>
 
       {/* Footer Contact */}
-      <footer id="contact" className="bg-gray-900 text-white py-12">
-        <div className="max-w-4xl mx-auto px-6">
-          <Contact />
+      <footer id="contact" className="bg-gray-100 text-gray-800 py-12">
+        <div className="max-w-7xl mx-auto px-6">
+          <ContactSection />
         </div>
       </footer>
     </div>

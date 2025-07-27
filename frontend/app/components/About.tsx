@@ -8,7 +8,7 @@ export default function About() {
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
         {/* Text Content */}
         <div className="space-y-6">
-          <h2 className="text-4xl font-extrabold text-gray-800 border-l-8 border-pink-600 pl-4">
+          <h2 className="text-4xl font-extrabold text-gray-800 border-l-8 border-yellow-600 pl-4">
             About Our Marriage Hall
           </h2>
           <p className="text-lg text-gray-700 leading-relaxed">
@@ -23,7 +23,7 @@ export default function About() {
           <div>
             <a
               href="#booking"
-              className="inline-block mt-4 bg-pink-600 text-white font-medium px-6 py-3 rounded-lg shadow hover:bg-pink-700 transition"
+              className="inline-block mt-4 bg-yellow-600 text-white font-medium px-6 py-3 rounded-lg shadow hover:bg-pink-700 transition"
             >
               Book Now
             </a>
