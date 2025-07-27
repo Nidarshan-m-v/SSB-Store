@@ -53,8 +53,9 @@ const ContactSection = () => {
                   here to help make your special day perfect!
                 </p>
                 <img
-                  src="/contact-image.jpg"
+                  src="/images/support.jpg"
                   alt="Support illustration"
+                  width={500}
                   className="rounded-lg shadow-md"
                 />
               </div>

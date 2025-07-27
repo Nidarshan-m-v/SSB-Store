@@ -1,6 +1,7 @@
-'use client';
+// components/About.tsx
+"use client";
 
-import Image from 'next/image';
+import FlipCard from "./FlipCard";
 
 export default function About() {
   return (
@@ -12,13 +13,16 @@ export default function About() {
             About Our Marriage Hall
           </h2>
           <p className="text-lg text-gray-700 leading-relaxed">
-            Welcome to our prestigious marriage hall, a perfect destination for celebrating life's most cherished moments.
-            We blend tradition and elegance with modern amenities to create an unforgettable venue for weddings,
-            engagements, receptions, and other special gatherings.
+            Welcome to our prestigious marriage hall, a perfect destination for
+            celebrating life's most cherished moments. We blend tradition and
+            elegance with modern amenities to create an unforgettable venue for
+            weddings, engagements, receptions, and other special gatherings.
           </p>
           <p className="text-gray-600">
-            From spacious seating arrangements and ambient lighting to professional staff and ample parking, we provide
-            everything you need to ensure your event runs smoothly. Your celebration deserves the perfect setting – and we deliver it with grace.
+            From spacious seating arrangements and ambient lighting to
+            professional staff and ample parking, we provide everything you need
+            to ensure your event runs smoothly. Your celebration deserves the
+            perfect setting – and we deliver it with grace.
           </p>
           <div>
             <a
@@ -30,16 +34,10 @@ export default function About() {
           </div>
         </div>
 
-        {/* Image Section */}
-        <div className="relative w-full h-80 md:h-[400px] rounded-lg overflow-hidden shadow-lg">
-          <Image
-            src="/images/marriage-hall.jpg" // ✅ Make sure this image exists in public/images
-            alt="Marriage Hall"
-            layout="fill"
-            objectFit="cover"
-            className="rounded-lg"
-          />
-        </div>
+        {/* Flip Card Section */}
+        <section className="w-full p-1 flex justify-center items-center bg-yellow-50">
+          <FlipCard />
+        </section>
       </div>
     </section>
   );
