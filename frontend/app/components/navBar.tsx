@@ -1,11 +1,11 @@
-// components/navBar.tsx
+// app/components/navBar.tsx
 "use client";
 
 import Link from "next/link";
 
 export default function NavBar() {
   return (
-    <nav className="fixed top-0 w-full bg-white shadow z-50">
+    <nav className="fixed top-0 w-full bg-white shadow-lg z-50 transition-all duration-300">
       <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
         <h1 className="text-2xl font-bold text-blue-700">SSB Marriage Hall</h1>
         <ul className="flex space-x-6 font-medium text-gray-700">

@@ -6,8 +6,8 @@ import Image from "next/image";
 
 const images = [
   "/images/marriage_hall_1.jpg",
-  "/images/marriage_hall_1.jpg",
-  "/images/marriage_hall_1.jpg",
+  "/images/marriage_hall_2.jpg",
+  "/images/marriage_hall_3.jpg",
 ];
 
 export default function ImageCarousel() {

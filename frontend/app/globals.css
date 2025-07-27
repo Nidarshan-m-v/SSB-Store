@@ -1,26 +1,125 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+
+
+/* globals.css */
+
+/* Animation styles */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css');
+
+/* Navbar styles */
+nav {
+  -webkit-backdrop-filter: blur(10px); /* Safari 9+, iOS 9+ */
+  backdrop-filter: blur(10px);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+nav ul li a {
+  transition: color 0.3s ease;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+nav ul li a:hover {
+  color: #1d4ed8; /* Change to a darker blue on hover */
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* globals.css */
+.carousel {
+    --radius: 8px;
+    --height: 320px;
+    --active-height: 410px;
+    --overlay: 0.75;
+}
+
+.carousel-wrapper {
+    opacity: 0;
+    transform: translateX(100px);
+    transition: all 0.8s ease-in-out;
+}
+
+.carousel.loaded {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.carousel-wrapper {
+    height: var(--active-height);
+    align-items: center;
+}
+
+.carousel:not(.loaded) .carousel-wrapper {
+    transition-duration: 0s !important;
+}
+
+.carousel-slide {
+    display: flex;
+    align-items: flex-end;
+    border-radius: var(--radius);
+    height: var(--height);
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.15);
+}
+
+.carousel.loaded .carousel-slide {
+    transition: all 0.3s ease-in-out 0.2s;
+}
+
+.carousel-slide.carousel-slide-active {
+    height: var(--active-height);
+}
+
+.carousel-slide:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(20deg, rgba(0, 0, 0, var(--overlay)) 0%, rgba(0, 0, 0, 0) 100%);
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+}
+
+.carousel img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: var(--radius);
+}
+
+.carousel .elementor-testimonial__cite {
+    z-index: 2;
+    position: relative;
+}
+
+.carousel .elementor-testimonial__name {
+    margin-bottom: 5px;
+}
+
+.carousel .swiper-pagination,
+.carousel .elementor-swiper-button {
+    display: none;
+}
+
+.carousel .swiper-container {
+    overflow: hidden;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (max-width: 1024px) {
+    .carousel {
+        --height: 180px;
+        --active-height: 250px;
+    }
+}
+
+@media (max-width: 767px) {
+    .carousel {
+        --height: 80px;
+        --active-height: 105px;
+        width: 100% !important;
+        max-width: var(--container-widget-width, 300px) !important;
+    }
+    .carousel .elementor-testimonial__cite {
+        opacity: 0;
+    }
 }
