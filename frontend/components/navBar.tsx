@@ -10,8 +10,8 @@ export default function NavBar() {
         <h1 className="text-2xl font-bold text-black">SSB Marriage Hall</h1>
         <ul className="flex space-x-6 font-medium text-gray-700">
           <li><Link href="/">Home</Link></li>
-          <li><Link href="/Gallery">Gallery</Link></li>
-          <li><Link href="/booking">Booking</Link></li>
+          <li><Link href="/gallery">Gallery</Link></li>
+          <li><Link href="/terms">Booking</Link></li> {/* Changed here */}
           <li><a href="#about">About</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>

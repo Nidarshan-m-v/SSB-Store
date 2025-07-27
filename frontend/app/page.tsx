@@ -1,8 +1,8 @@
 'use client';
 
-import ImageCarousel from "./components/ImageCarousel";
-import ContactSection from "./components/ContactSection";
-import About from "./components/About";
+import ImageCarousel from "../components/ImageCarousel";
+import ContactSection from "../components/ContactSection";
+import About from "../components/About";
 import Link from "next/link";
 
 export default function Home() {
